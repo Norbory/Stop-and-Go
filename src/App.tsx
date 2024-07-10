@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import { Fondo } from './components'
+import { Fondo, Navbar } from './components'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <body className=''>
+      <Navbar />
       <h1
         className='text-transparent bg-clip-text bg-gradient-to-r to-red-600 from-gray-400 text-5xl font-bold text-center p-12'
       >
