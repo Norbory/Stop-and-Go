@@ -1,3 +1,4 @@
+import { NavigationMenuDemo } from "../Design/NavigationMenu"
 export function Navbar () {
     return (
         <nav className='flex justify-between items-center px-20 py-4'>
@@ -5,7 +6,7 @@ export function Navbar () {
                 Stop and Go
             </h1>
             {/* Botones de navegación */}
-            <div className='flex justify-center items-center'>
+            {/* <div className='flex justify-center items-center'>
                 <a
                     href='#'
                     className='text-gray-400 hover:text-gray-800 font-bold py-2 px-4'
@@ -24,7 +25,8 @@ export function Navbar () {
                 >
                     Contact
                 </a>
-            </div>
+            </div> */}
+            <NavigationMenuDemo />
             {/* Botones de inicio de sesión y registro */}
             <div
                 className='flex justify-end'

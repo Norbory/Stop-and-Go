@@ -25,7 +25,7 @@ export function Fondo () {
                         </clipPath>
                     </defs>
                 </svg>
-                <h2 className="flex text-lg sm:text-2xl font-semibold text-[#d0d0d2] px-2 gap-2">
+                <h2 className="flex text-md sm:text-lg font-semibold text-[#d0d0d2] px-2 gap-2">
                     <span>Our Partners</span>
                     <svg fill="currentColor" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
                         className="w-4" viewBox="0 0 30.727 30.727"
