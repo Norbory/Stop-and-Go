@@ -120,7 +120,10 @@ export function NavigationMenuDemo() {
                 <ListItem href="/docs" className="flex items-center border-l-2 border-orange-600 h-full" title="Lando Norris"></ListItem>
                 <ListItem href="/docs" className="flex items-center border-l-2 border-orange-600 h-full" title="Oscar Piastri"></ListItem>
 
-
+                <ListItem href="/docs" className="flex items-center border-l-2 border-gray-400 h-full" title="Daniel Ricardito"></ListItem>
+                <ListItem href="/docs" className="flex items-center border-l-2 border-gray-400 h-full" title="Yuki Tsunoda"></ListItem>
+                <ListItem href="/docs" className="flex items-center border-l-2 border-sky-600 h-full" title="Esteban Ocon"></ListItem>
+                <ListItem href="/docs" className="flex items-center border-l-2 border-sky-600 h-full" title="Pierre Gasly"></ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
