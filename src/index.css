@@ -79,3 +79,14 @@
   * {
     font-family: 'F1Font', sans-serif;
   }
+
+  .driver-standing-card {
+    @apply flex flex-col bg-card shadow-2xl rounded-lg px-4 pt-4;
+    transition: all 0.2s ease-in-out;
+    border: 0.5px solid gray;
+  }
+
+  .driver-standing-card:hover {
+    @apply bg-primary text-primary-foreground shadow-lg;
+    transform: translateY(-3rem);
+  }
