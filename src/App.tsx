@@ -33,7 +33,7 @@ function App() {
           ))}
         </div>
         <table className="table-auto border-collapse border border-slate-500 text-sm text-left text-gray-500 dark:text-gray-400 w-11/12">
-          <thead className='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
+          <thead className='text-xs text-gray-50 uppercase bg-gray-700'>
             <tr>
               <th className="border border-slate-600 px-2 py-1 ...">Pos</th>
               <th className="border border-slate-600 px-2 py-1 ...">Driver</th>

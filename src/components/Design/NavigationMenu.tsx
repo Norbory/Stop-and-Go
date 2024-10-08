@@ -1,7 +1,7 @@
 import * as React from "react"
-
 import { cn } from "../../lib/utils"
-// import { Icons } from "@/components/icons"
+import { ICurrentDriver } from "../core/types"
+import { GetDrivers } from "../core/hooks/Drivers"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -50,6 +50,15 @@ const components: { title: string; href: string; description: string }[] = [
 ]
 
 export function NavigationMenuDemo() {
+  const [drivers, setDrivers] = React.useState<ICurrentDriver[]>([])
+
+  React.useEffect(() => {
+    GetDrivers(2024).then((data) => {
+      setDrivers(data??[])
+      console.log('La respuesta es la siguiente: ',data)
+    })
+  }, [])
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -110,7 +119,19 @@ export function NavigationMenuDemo() {
           <NavigationMenuTrigger className="text-xs">Drivers</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[500px] lg:w-[600px] lg:grid-cols-4 grid-cols-3">
-                <ListItem href="/docs" className="flex items-center border-l-2 border-blue-600 h-full" title="Sergio Perez"></ListItem>
+              {
+                drivers 
+                ? drivers.map((driver) => (
+                  <ListItem 
+                    key={driver.permanentNumber} 
+                    title={`${driver.givenName} ${driver.familyName}`}
+                    className="flex items-center border-l-2 border-red-600 hover:border-l-8 h-full transition-all duration-200 ease-in-out"
+                  >
+                  </ListItem>
+                ))
+                : <ListItem title="Loading..."></ListItem>
+              }
+                {/* <ListItem href="/docs"  title="Sergio Perez"></ListItem>
                 <ListItem href="/docs" className="flex items-center border-l-2 border-blue-600 h-full" title="Max Verstappen"></ListItem>
                 <ListItem href="/docs" className="flex items-center border-l-2 border-red-600 h-full" title="Nico Hülkenberg"></ListItem>
                 <ListItem href="/docs" className="flex items-center border-l-2 border-red-600 h-full" title="Kevin Magnussen"></ListItem>
@@ -123,7 +144,7 @@ export function NavigationMenuDemo() {
                 <ListItem href="/docs" className="flex items-center border-l-2 border-gray-400 h-full" title="Daniel Ricciardo"></ListItem>
                 <ListItem href="/docs" className="flex items-center border-l-2 border-gray-400 h-full" title="Yuki Tsunoda"></ListItem>
                 <ListItem href="/docs" className="flex items-center border-l-2 border-sky-600 h-full" title="Esteban Ocon"></ListItem>
-                <ListItem href="/docs" className="flex items-center border-l-2 border-sky-600 h-full" title="Pierre Gasly"></ListItem>
+                <ListItem href="/docs" className="flex items-center border-l-2 border-sky-600 h-full" title="Pierre Gasly"></ListItem> */}
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
